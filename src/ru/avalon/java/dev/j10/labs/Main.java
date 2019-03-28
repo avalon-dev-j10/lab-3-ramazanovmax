@@ -3,6 +3,8 @@ package ru.avalon.java.dev.j10.labs;
 import ru.avalon.java.dev.j10.labs.initialization.FibonacciInitializer;
 import ru.avalon.java.dev.j10.labs.initialization.RandomInitializer;
 import ru.avalon.java.dev.j10.labs.sort.BubbleSort;
+import ru.avalon.java.dev.j10.labs.sort.SelectionSort;
+import ru.avalon.java.dev.j10.labs.sort.ShellSort;
 
 public class Main {
 
@@ -19,10 +21,23 @@ public class Main {
         
         System.err.println("Сумма: "+summ);
         
-                
+        
+        System.err.println("Пузырьковая сортировка:");    
         new RandomInitializer().initialize(array);
         print(array);
         new BubbleSort().sort(array);
+        print(array); 
+        
+        System.err.println("Сортировка выбором:");   
+        new RandomInitializer().initialize(array);
+        print(array);
+        new SelectionSort().sort(array);
+        print(array);
+        
+        System.err.println("Сортировка Шелла:");   
+        new RandomInitializer().initialize(array);
+        print(array);
+        new ShellSort().sort(array);
         print(array);
 
 	    /*
