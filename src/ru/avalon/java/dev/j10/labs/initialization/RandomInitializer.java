@@ -22,6 +22,11 @@ public class RandomInitializer implements Initializer {
      * @param array массив, подлежащий инициализации
      */
     public void initialize(int[] array) {
+        
+        for(int i = 0; i < array.length; i++){
+        array[i] = (int)(Math.random() * 101) - 50;
+        }
+        
         /*
          * TODO(Студент): Реализовать метод initialize класса RandomInitializer
          */

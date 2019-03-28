@@ -17,6 +17,28 @@ public class BubbleSort implements Sort {
      * {@inheritDoc}
      */
     public void sort(int[] array) {
+        int i = 0;
+	int buf;
+	char swap_cnt = 0;
+
+	if (array.length == 0)
+		return;
+	while (i < array.length)
+	{
+		if (i + 1 != array.length && array[i] > array[i + 1])
+		{
+			buf = array[i];
+			array[i] = array[i + 1];
+			array[i + 1] = buf;
+			swap_cnt = 1;
+		}
+		i++;
+		if (i == array.length && swap_cnt == 1)
+		{
+			swap_cnt = 0;
+			i = 0;
+		}
+	}
         /*
          * TODO(Студент): Реализовать метод sort класса BubbleSort
          */
